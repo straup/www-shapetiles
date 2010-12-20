@@ -1,0 +1,87 @@
+<html>
+	<head>
+		<title>flickr shapetiles / about</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<link rel="stylesheet" type="text/css" href="/shapetiles.css" />
+	</head>
+	<body onload="shapetiles_loadmap();">
+
+		<div id="about">
+		<h2>flickr shapetiles / july 2010</h2>
+
+		<p class="aside" style="margin-bottom:25px;">a thing made by <a href="http://www.aaronland.info/">aaron straup cope</a></p>
+
+		<p>Flickr Shapetiles is a <a href="http://wiki.openstreetmap.org/wiki/Slippy_Map">slippy map</a> of all the shapefiles that were generated from <a href="http://blog.flickr.net/en/2006/08/28/great-shot-whered-you-take-that/">geotagged Flickr photos</a>. You can pan the map to move around, zoom in and out by double-clicking (or shift-double-clicking) the map or by using the scroll-wheel on your mouse. There is also experimental support for touch screen devices (which really just means the <a href="http://www.flickr.com/photos/straup/tags/ipad">ipad</a>, right now.)</p>
+
+		<div class="image500">
+			<a href="http://www.flickr.com/photos/straup/4779104636/" title="Untitled by straup, on Flickr"><img src="http://farm5.static.flickr.com/4116/4779104636_48441a2002.jpg" width="500" height="359" alt=""></a>
+			<div class="caption">The World</div>
+		</div>
+
+		<p>Every geotagged photo on Flickr has up to six <a href="http://woe.spum.org/">Where On Earth (WOE) IDs</a> associated with it. These are unique numeric identifiers that correspond to the hierarchy of places where a photo was taken: the neighbourhood, the town, the county, and so on up to continents.</p>
+
+		<p>If all the location data for a given WOE ID were plotted on a map could you generate a mostly accurate shape of that place? Not a perfect representation, perhaps, but something more fine-grained than a bounding box. It turns out you can!</p>
+
+		<div class="image500">
+			<a href="http://www.flickr.com/photos/straup/4780690722/" title="portugal / spain by straup, on Flickr"><img src="http://farm5.static.flickr.com/4121/4780690722_d4fafc00d2.jpg" width="500" height="366" alt="portugal / spain"></a>
+			<div class="caption">Portugal / Spain</div>
+		</div>
+
+		<p>Only zoom levels 1 - 10 <span class="aside">(zoom level 1 being like looking at the Earth from a shapeship, and 10 like looking at a city from a small twin-engine airplane)</span> have been rendered. Beyond that it starts to get a little boring and it's takes a really long time to render tiles at higher zoom levels so 10 seemed like a good place to stop for now.</p>
+
+		<div class="image500">
+			<a href="http://www.flickr.com/photos/straup/4780334608/" title="(the channel) by straup, on Flickr"><img src="http://farm5.static.flickr.com/4093/4780334608_90a8e391c8.jpg" width="500" height="311" alt="(the channel)"></a>
+			<div class="caption">The Channel</div>
+		</div>
+
+		<p><a href="http://www.aaronland.info/weblog/2010/04/05/milkshake/#youarehere">Or put another way</a>: <q>I'd like to generate tiles where the dots expand and contract as you zoom in and out. I'd like to generate map tiles that give you that same dizzy feeling you get when you look down at a city at night, from an airplane. In some ways I don't even care about the street level tiles. I do but we've spent so long fussing over the relentless details in cartography that we've sort of forgotten what things (should) look like at a distance.</q></p>
+
+		<div class="image500">
+			<a href="http://www.flickr.com/photos/straup/4786232129/" title="Hawaii by straup, on Flickr"><img src="http://farm5.static.flickr.com/4073/4786232129_1316243333.jpg" width="500" height="314" alt="Hawaii"></a>
+			<div class="caption">Hawaii</div>
+		</div>
+
+		<p class="aside">As of this writing, the map is known to not work with version 5x. of Google's web browser <a href="http://www.google.com/chrome">Chrome</a>. It seems to work fine in version 6 and higher.</p>
+
+		<p>If you want to get in to the gory details of the subject, including the how and the why, here are some links to get you started:</p>
+
+		<div id="readinglist">
+		<p>Writing:</p>
+
+		<ul>
+			<li><a href="http://code.flickr.com/blog/2008/10/30/the-shape-of-alpha/">The Shape of Alpha</a></li>
+			<li><a href="http://code.flickr.com/blog/2009/01/12/living-in-the-donut-hole/">Living in the Donut Hole</a></li>
+			<li><a href="http://www.aaronland.info/weblog/2009/06/01/bubblegum/#geoweb09">The Undiscovered Country</a></li>
+			<li><a href="http://www.aaronland.info/weblog/2010/04/05/milkshake/#youarehere">areas of / you are here</a></li>
+		</ul>
+
+		<p>Talking:</p>
+
+		<ul>
+			<li><a href="http://blip.tv/file/969021">Going Places on Flickr: The Significance of Geographical Information in Photos</a></li>
+			<li><a href="http://www.channels.com/episodes/show/4698378/Where-09-Aaron-Cope-The-Shape-of-Alpha-">The Shape of Alpha</a></li>
+		</ul>
+
+		<p>Code:</p>
+
+		<ul>
+			<li><a href="http://github.com/straup/Clustr">Clustr</a></li>
+			<li><a href="http://tilestache.org/">TileStache</a></li>
+			<li><a href="http://github.com/stamen/modestmaps-js">ModestMaps.js</a></li>
+		</ul>
+
+		<p>Data:</p>
+
+		<ul>
+			<li><a href="http://code.flickr.com/blog/2009/05/21/flickr-shapefiles-public-dataset-10/">Flickr Shapefiles Public Dataset</a></li>
+			<li><a href="/shapetiles.tar.gz">Flickr Shapetiles ESRI shapefiles</a> &#8212; <span class="aside">these files use the <a href="http://crschmidt.net/blog/archives/243/google-projection-900913/">EPSG:900913</a> map projection and are derived from the shapefiles that <a href="http://mojodna.net/">Seth Fitzsimmons</a> generated from Flickr Shapefiles Public Dataset. One day he'll even finsh writing the <a href="">blog post</a> about how he did it, too...</span></li>
+		</ul>
+		</div>
+	
+		<p id="goto"><a href="/">great, now show me the map!</a></p>
+
+		</div>
+	</body>
+</html>

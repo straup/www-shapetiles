@@ -1,0 +1,90 @@
+body {
+	margin:0px;
+	font-family:sans-serif;
+	line-height:1.1em;
+}
+
+li { 
+	list-style-type: none;
+	padding-bottom:5px;
+}
+
+#readinglist { 
+	margin-top:30px;
+}
+
+#map{
+	width: 100%;
+	height: 100%;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	background-image: url('dot.gif');
+	background-color:#f0f0f0;
+}
+
+#footer { 
+	text-align:right;
+	font-size:11px;
+	margin:0px;	
+	padding:15px;
+	background-color:#fff;
+	position: absolute; right: 0px; bottom: 0px;
+	border-top: 1px dotted #ccc;
+	border-left: 1px dotted #ccc;
+	color:#999;
+	opacity: .9;
+}
+
+#footer a { 
+	color:#666;
+	font-weight:700;
+}
+
+#about { 
+	margin-top:5%;
+	margin-left: 10%;
+	margin-bottom: 10%;
+	width: 525px;
+	max-width: 525px;
+	font-size:small;
+}
+
+#goto { 
+	font-size:18pt;
+	margin-top:50px;
+	padding-top:25px;
+	font-weight:700;
+	text-align:center;
+	border-top:1px solid #ccc;
+}
+
+#goto a { 
+	text-decoration: none;
+	color:#333;
+}
+
+img { 
+	 image-rendering: -moz-crisp-edges;
+	border: none;
+}
+
+.image500 { 
+	border: 1px dotted #ccc;
+	padding:10px;
+	width: 500px;
+	max-width: 500px;
+	margin-top:30px;
+	margin-bottom:30px;
+}
+
+.caption { 
+	text-align:right;
+	font-size:small;
+	padding-top:10px;
+	color:#666;
+}
+
+.aside { 
+	font-style: italic;
+}
